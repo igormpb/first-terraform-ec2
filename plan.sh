@@ -6,7 +6,7 @@ if [ "$typeEnvironment" == "1" ]; then
     echo "Running Terraform in dev"
     terraform plan -var-file=dev.tfvars
     if [ "$(echo "$isApply" | tr '[:upper:]' '[:lower:]')" == "yes" ]; then
-        echo "Running apply"
+        echo "wait running apply"
         terraform apply -var-file=dev.tfvars
         echo "Finish"
     else
